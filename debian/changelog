@@ -1,5 +1,232 @@
-template-repository (1.0-1) unstable; urgency=medium
+libdist-zilla-plugin-run-perl (0.050-1) unstable; urgency=medium
 
-  * Initial release
+  * Import upstream version 0.050.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.7.0.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- gregor herrmann <gregoa@debian.org>  Sat, 08 Jun 2024 00:19:19 +0200
+
+libdist-zilla-plugin-run-perl (0.049-1) unstable; urgency=medium
+
+  * Import upstream version 0.049.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 27 Oct 2023 02:38:20 +0200
+
+libdist-zilla-plugin-run-perl (0.048-2) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends-Indep: Drop versioned constraint on libjson-pp-perl,
+      libscalar-list-utils-perl.
+    + libdist-zilla-plugin-run-perl: Drop versioned constraint on
+      libjson-pp-perl, libscalar-list-utils-perl in Depends.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.6.2, no changes needed.
+
+  [ gregor herrmann ]
+  * Drop manpage removal from debian/rules.
+    Build-depend on libmodule-build-tiny-perl (>= 0.040) instead, which is the
+    first version to not create them.
+    Thanks to Niko Tyni for the bug report. (Closes: #1040242)
+  * Update years of packaging copyright.
+  * Set Rules-Requires-Root: no.
+  * Annotate test-only build dependencies with <!nocheck>.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 03 Jul 2023 20:55:43 +0200
+
+libdist-zilla-plugin-run-perl (0.048-1) unstable; urgency=medium
+
+  * Import upstream version 0.048.
+  * Update upstream contact.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Update (build) dependencies.
+  * Bump debhelper compatibility level to 11.
+  * Remove trailing whitespace from debian/*.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 12 Feb 2019 19:52:18 +0100
+
+libdist-zilla-plugin-run-perl (0.047-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * Import upstream version 0.047.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.5.
+  * Remove some unnecessary version constraints from (build) dependencies.
+    Thanks to cme.
+  * Bump debhelper compatibility level to 10.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 29 Jul 2018 17:20:08 +0200
+
+libdist-zilla-plugin-run-perl (0.046-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Damyan Ivanov ]
+  * New upstream version 0.046
+  * declare conformance with Policy 4.1.1 (no changes needed)
+
+ -- Damyan Ivanov <dmn@debian.org>  Sun, 05 Nov 2017 22:47:21 +0200
+
+libdist-zilla-plugin-run-perl (0.043-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Rename autopkgtest configuration file(s) as per new pkg-perl-
+    autopkgtest schema.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Import upstream version 0.043.
+  * Update years of packaging copyright.
+  * Add (build) dependency on JSON::PP 2.27300.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 15 Feb 2016 20:12:59 +0100
+
+libdist-zilla-plugin-run-perl (0.042-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Rename debian/tests/test-files to debian/tests/pkg-perl/test-files.
+  * Drop debian/tests/control, add Testsuite field to debian/control
+    instead.
+
+  [ Lucas Kanashiro ]
+  * Import upstream version 0.042
+  * Declare compliance with Debian policy 3.9.6
+  * Remove empty manpage during installation. Upstream do not have
+    manpage.
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Fri, 21 Aug 2015 12:53:50 -0300
+
+libdist-zilla-plugin-run-perl (0.026-2) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/tests/control: add stanza for new runtime-deps-and-recommends
+    tests.
+
+  [ Niko Tyni ]
+  * autopkgtest: include test data for the test suite. This is needed by
+    at least 50_mint.t ("no viable configuration could be found")
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 10 Sep 2014 23:48:09 +0200
+
+libdist-zilla-plugin-run-perl (0.026-1) unstable; urgency=medium
+
+  * Add debian/upstream/metadata
+  * Imported upstream version 0.026
+  * Add autopkgtest control file.
+  * Add build dependency on libtest-fatal-perl.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 07 Sep 2014 17:14:53 +0200
+
+libdist-zilla-plugin-run-perl (0.023-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Update (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 21 Aug 2014 11:35:40 -0700
+
+libdist-zilla-plugin-run-perl (0.022-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add build dependency on Module::Build::Tiny.
+  * Install new CONTRIBUTING file.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 25 Jul 2014 20:54:42 +0200
+
+libdist-zilla-plugin-run-perl (0.021-1) unstable; urgency=medium
+
+  * Strip trailing slash from metacpan URLs.
+  * New upstream release.
+  * Update Upstream-Contact and Copyright information and packaging years.
+  * Update build dependencies.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 01 Mar 2014 23:05:00 +0100
+
+libdist-zilla-plugin-run-perl (0.020-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Dominique Dumont ]
+  * Imported Upstream version 0.020
+  * compat: bumped to 9
+  * control deps:
+    * libdist-zilla-perl requires version >= 4.200002
+    + added dep libtest-file-sharedir-perl
+  * copyright: updated years and format
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 12 May 2013 21:15:13 +0200
+
+libdist-zilla-plugin-run-perl (0.013-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patch fix-spelling, applied upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 12 Nov 2011 17:34:56 +0100
+
+libdist-zilla-plugin-run-perl (0.012-1) unstable; urgency=low
+
+  * Team upload
+
+  [ Alessandro Ghedini ]
+  * New upstream release
+  * Drop use-standard-dzil-test (merged upstream)
+
+  [ gregor herrmann ]
+  * Refresh spelling.patch (offset).
+  * Bump build dependency on Test::More.
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Tue, 08 Nov 2011 10:44:29 +0100
+
+libdist-zilla-plugin-run-perl (0.011-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 05 Nov 2011 18:33:36 +0100
+
+libdist-zilla-plugin-run-perl (0.010-1) unstable; urgency=low
+
+  * new upstream release
+  * copyright: updated upstream (c) year
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 17 Sep 2011 09:19:02 +0200
+
+libdist-zilla-plugin-run-perl (0.008-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Refresh fix-spelling patch (offset).
+  * Bump debhelper compatibility level tp 8.
+  * Add /me to Uploaders.
+  * Add (build) dependency on libstring-formatter-perl.
+  * Add perl as an alternative build dependency for Test::More.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 27 Aug 2011 19:22:30 +0200
+
+libdist-zilla-plugin-run-perl (0.005-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #620783)
+
+ -- Dominique Dumont <domi.dumont@free.fr>  Tue, 19 Apr 2011 11:13:14 +0200
