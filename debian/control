@@ -1,15 +1,43 @@
-Source: template-repository
-Section: unknown
+Source: libdist-zilla-plugin-run-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Dominique Dumont <dod@debian.org>,
+           gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               libmodule-build-tiny-perl (>= 0.040),
+               perl
+Build-Depends-Indep: libdist-zilla-perl <!nocheck>,
+                     libfile-pushd-perl <!nocheck>,
+                     libjson-pp-perl <!nocheck>,
+                     libmoose-perl <!nocheck>,
+                     libnamespace-autoclean-perl <!nocheck>,
+                     libpath-class-perl <!nocheck>,
+                     libpath-tiny-perl <!nocheck>,
+                     libscalar-list-utils-perl <!nocheck>,
+                     libstring-formatter-perl <!nocheck>,
+                     libtest-deep-perl <!nocheck>,
+                     libtest-fatal-perl <!nocheck>,
+                     libtest-file-sharedir-perl <!nocheck>
+Standards-Version: 4.7.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libdist-zilla-plugin-run-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libdist-zilla-plugin-run-perl.git
+Homepage: https://metacpan.org/release/Dist-Zilla-Plugin-Run
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libdist-zilla-plugin-run-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libdist-zilla-perl,
+         libjson-pp-perl,
+         libmoose-perl,
+         libnamespace-autoclean-perl,
+         libpath-tiny-perl,
+         libscalar-list-utils-perl,
+         libstring-formatter-perl
+Description: Dist::Zilla plugin to execute external commands
+ Dist::Zilla::Plugin::Run uses specific hooks of Dist::Zilla to execute
+ external command when running dzil. This module is useful to ship generated
+ code in a Perl module distribution.
